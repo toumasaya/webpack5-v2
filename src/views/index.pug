@@ -1,0 +1,17 @@
+extends Views/layouts/Default.pug
+
+//- set variables used in layout
+block variables
+  - const title = 'Webpack 5 - v2'
+
+//- add page specifically styles
+//- append style
+//-   link(href=require('Styles/home.sass') rel='stylesheet')
+
+//- add page specifically scripts
+append customScript
+  //- script(src=require('Scripts/vendor/splide.js') defer)
+
+block content
+  h1 Webpack 5 - v2
+  p hello world

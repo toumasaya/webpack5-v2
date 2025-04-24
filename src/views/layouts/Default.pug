@@ -1,0 +1,41 @@
+//- External variables
+block variables
+
+doctype html
+html(lang='zh-Hant')
+  head
+    //- Meta
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='description' content='Hello world')
+
+    //- Favicons
+    //- link(rel='icon' href=require('Images/favicons/favicon.svg') type='image/svg+xml' sizes='any')
+    //- link(rel='icon' href=require('Images/favicons/favicon-32px.png') type='image/png' sizes='32x32')
+
+    //- Page title
+    title= title
+
+    //- Page styles
+    block style
+      //- common used styles
+      link(rel='stylesheet' href=require('Styles/main.sass'))
+
+    //- Additional head block, e.g. for preload scripts in head
+    block head
+      script(src=require('Scripts/main.js') defer)
+    //- Page custom script
+    block customScript
+
+      //- Demo how to inline CSS
+      //- style=require('Styles/inline-styles.scss?inline')
+  body
+    block header
+      include Header
+    block content
+    block footer
+      include Footer
+    //- include Views/components/common/BackToTop
+    //- Page scripts
+    block script
+      //- script(src=require('Scripts/common2.js'))
